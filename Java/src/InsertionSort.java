@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Arrays;
 
 /**
@@ -6,8 +8,8 @@ import java.util.Arrays;
  * O(n^2)
  */
 public class InsertionSort {
-    public static void insertionSort(int[] arr){
-        for (int i = 1; i < arr.length; i++) {
+    public void sort(int[] arr, int start, int end){
+        for (int i = start + 1; i <= end; i++) {
             // save current element, found the place to insert
             int curr = arr[i];
             int j = i - 1;
@@ -19,12 +21,5 @@ public class InsertionSort {
             // insertion spot found
             arr[j+1] = curr;
         }
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {2, 5, 3, 1, 9, 77, 23, 12, 61};
-        System.out.println("Before: " + Arrays.toString(arr));
-        insertionSort(arr);
-        System.out.println("After: " + Arrays.toString(arr));
     }
 }
