@@ -2,14 +2,15 @@ package test;
 
 import org.junit.Assert;
 import org.junit.Test;
-import src.InsertionSort;
+import src.SelectionSort;
 
-public class InsertionSortTest {
+public class SelectionSortTest {
+
     @Test
-    public void testInsertionSort(){
-        InsertionSort insertionSort = new InsertionSort();
+    public void testSelectionSort(){
+        SelectionSort selectionSort = new SelectionSort();
         int[] arr = TestUtil.generateRandomArray(10);
-        insertionSort.sort(arr, 0, arr.length-1);
+        selectionSort.sort(arr, 0, arr.length-1);
         if (!TestUtil.isSorted(arr)){
             Assert.fail();
         }
