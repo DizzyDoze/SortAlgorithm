@@ -4,8 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 import src.QuickSort;
 
-import java.util.Arrays;
-
 public class QuickSortTest {
     @Test
     public void testMergeSort(){
